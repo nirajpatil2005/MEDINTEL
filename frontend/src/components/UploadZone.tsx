@@ -57,16 +57,16 @@ export function UploadZone({ onUpload }: UploadZoneProps) {
       <div className="w-full max-w-2xl">
         {/* Hero Text */}
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[hsl(var(--accent))] border border-[hsl(var(--primary)/0.2)] mb-6">
-            <Sparkles className="w-3.5 h-3.5 text-[hsl(var(--primary))]" />
-            <span className="text-xs font-semibold text-[hsl(var(--primary))]">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-300 mb-6">
+            <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+            <span className="text-xs font-semibold text-emerald-600">
               AI-Powered Analysis
             </span>
           </div>
-          <h2 className="text-4xl font-bold mb-3 font-heading text-[hsl(var(--foreground))]">
+          <h2 className="text-4xl font-bold mb-3 font-heading text-slate-900">
             Medical Document Intelligence
           </h2>
-          <p className="text-[hsl(var(--muted-foreground))] text-base max-w-lg mx-auto leading-relaxed">
+          <p className="text-slate-600 text-base max-w-lg mx-auto leading-relaxed">
             Upload a medical stock report PDF. Our AI engine extracts structured data,
             preserves original column names, and generates executive insights — instantly.
           </p>
@@ -79,34 +79,34 @@ export function UploadZone({ onUpload }: UploadZoneProps) {
           onDragLeave={handleDragLeave}
           onClick={handleClick}
           className={`
-            upload-zone cursor-pointer rounded-2xl border-2 border-dashed p-12
+            cursor-pointer rounded-2xl border-2 border-dashed p-12
             flex flex-col items-center justify-center gap-5 transition-all duration-300
             ${
               isDragging
-                ? "border-[hsl(var(--primary))] bg-[hsl(var(--accent))] scale-[1.01]"
-                : "border-[hsl(var(--border))] hover:border-[hsl(var(--primary)/0.4)] bg-white"
+                ? "border-emerald-500 bg-emerald-50 scale-[1.01]"
+                : "border-emerald-300 hover:border-emerald-400 bg-white"
             }
           `}
         >
           <div
             className={`w-16 h-16 rounded-2xl flex items-center justify-center transition-all duration-300 ${
               isDragging
-                ? "bg-[hsl(var(--primary)/0.12)]"
-                : "bg-[hsl(var(--secondary))]"
+                ? "bg-emerald-100"
+                : "bg-slate-100"
             }`}
           >
             {isDragging ? (
-              <FileText className="w-7 h-7 text-[hsl(var(--primary))]" />
+              <FileText className="w-7 h-7 text-emerald-600" />
             ) : (
-              <Upload className="w-7 h-7 text-[hsl(var(--muted-foreground))]" />
+              <Upload className="w-7 h-7 text-slate-500" />
             )}
           </div>
 
           <div className="text-center">
-            <p className="text-sm font-medium text-[hsl(var(--foreground))]">
+            <p className="text-sm font-medium text-slate-900">
               {isDragging ? "Drop your PDF here" : "Drag & drop your medical stock PDF"}
             </p>
-            <p className="text-xs text-[hsl(var(--muted-foreground))] mt-1">
+            <p className="text-xs text-slate-500 mt-1">
               or click to browse • PDF files only
             </p>
           </div>
@@ -129,13 +129,13 @@ export function UploadZone({ onUpload }: UploadZoneProps) {
           ].map((feat) => (
             <div
               key={feat.title}
-              className="glass-panel rounded-xl p-4 text-center card-lift"
+              className="bg-white rounded-xl p-4 text-center border border-slate-200 shadow-sm hover:shadow-md transition-all duration-200"
             >
               <div className="text-xl mb-2">{feat.icon}</div>
-              <p className="text-xs font-semibold text-[hsl(var(--foreground))]">
+              <p className="text-xs font-semibold text-slate-900">
                 {feat.title}
               </p>
-              <p className="text-xs text-[hsl(var(--muted-foreground))] mt-0.5">
+              <p className="text-xs text-slate-500 mt-0.5">
                 {feat.desc}
               </p>
             </div>

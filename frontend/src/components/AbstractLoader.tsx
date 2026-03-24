@@ -40,32 +40,32 @@ export function AbstractLoader() {
       <div className="w-full max-w-md text-center">
         {/* Animated spinner */}
         <div className="relative w-20 h-20 mx-auto mb-8">
-          <div className="absolute inset-0 rounded-full border-2 border-[hsl(var(--border))]" />
-          <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-[hsl(var(--primary))] animate-spin" />
+          <div className="absolute inset-0 rounded-full border-2 border-slate-200" />
+          <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-emerald-600 animate-spin" />
           <div
-            className="absolute inset-3 rounded-full border-2 border-transparent border-b-[hsl(200,70%,40%)] animate-spin"
+            className="absolute inset-0 rounded-full border-2 border-transparent border-b-teal-500 animate-spin"
             style={{ animationDirection: "reverse", animationDuration: "1.5s" }}
           />
           <div className="absolute inset-0 flex items-center justify-center">
             <Loader2
-              className="w-6 h-6 text-[hsl(var(--primary))] animate-spin"
+              className="w-6 h-6 text-emerald-600 animate-spin"
               style={{ animationDuration: "3s" }}
             />
           </div>
         </div>
 
         {/* Message */}
-        <p className="text-sm font-medium text-[hsl(var(--foreground))] animate-subtle-pulse mb-2 h-5">
+        <p className="text-sm font-medium text-slate-900 animate-subtle-pulse mb-2 h-5">
           {LOADING_MESSAGES[messageIndex]}
         </p>
-        <p className="text-xs text-[hsl(var(--muted-foreground))]">
+        <p className="text-xs text-slate-500">
           Please wait while we process your document
         </p>
 
         {/* Progress bar */}
-        <div className="mt-8 w-full bg-[hsl(var(--secondary))] rounded-full h-1.5 overflow-hidden">
+        <div className="mt-8 w-full bg-slate-200 rounded-full h-1.5 overflow-hidden">
           <div
-            className="h-full rounded-full bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(200,70%,40%)] transition-all duration-500 ease-out"
+            className="h-full rounded-full bg-gradient-to-r from-emerald-600 to-teal-500 transition-all duration-500 ease-out"
             style={{ width: `${Math.min(progress, 95)}%` }}
           />
         </div>

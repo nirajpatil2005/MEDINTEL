@@ -66,14 +66,14 @@ export function ExportButtons({ data }: ExportButtonsProps) {
     <div className="flex items-center gap-3">
       <button
         onClick={exportCSV}
-        className="inline-flex items-center gap-2 px-4 py-2 text-xs font-medium rounded-lg bg-white hover:bg-[hsl(var(--secondary))] text-[hsl(var(--foreground))] transition-all duration-200 border border-[hsl(var(--border))] shadow-sm"
+        className="inline-flex items-center gap-2 px-4 py-2 text-xs font-medium rounded-lg bg-white hover:bg-slate-100 text-slate-900 transition-all duration-200 border border-slate-200 shadow-sm"
       >
         <Download className="w-3.5 h-3.5" />
         Export CSV
       </button>
       <button
         onClick={exportExcel}
-        className="inline-flex items-center gap-2 px-4 py-2 text-xs font-medium rounded-lg bg-[hsl(var(--primary))] hover:bg-[hsl(168,80%,28%)] text-white transition-all duration-200 shadow-sm"
+        className="inline-flex items-center gap-2 px-4 py-2 text-xs font-medium rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white transition-all duration-200 shadow-sm"
       >
         <FileSpreadsheet className="w-3.5 h-3.5" />
         Export Excel

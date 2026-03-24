@@ -125,7 +125,7 @@ export function StatsCards({ data, metadata }: StatsCardsProps) {
       label: "Columns Found",
       value: metadata.column_count.toString(),
       icon: Columns3,
-      iconColor: "text-teal-500",
+      iconColor: "text-emerald-600",
     },
     {
       label: "Characters Parsed",
@@ -142,7 +142,7 @@ export function StatsCards({ data, metadata }: StatsCardsProps) {
         {cards.map((card) => (
           <div
             key={card.label}
-            className="bg-white rounded-xl p-4 border border-[hsl(var(--border))] card-lift"
+            className="bg-white rounded-xl p-4 border border-slate-200 shadow-sm hover:shadow-md transition-all duration-200"
             style={{
               borderLeftWidth: "3px",
               borderLeftColor: card.borderColor,
@@ -155,10 +155,10 @@ export function StatsCards({ data, metadata }: StatsCardsProps) {
                 <card.icon className={`w-4.5 h-4.5 ${card.iconColor}`} />
               </div>
             </div>
-            <p className="text-2xl font-bold font-heading text-[hsl(var(--foreground))] mb-0.5">
+            <p className="text-2xl font-bold font-heading text-slate-900 mb-0.5">
               {card.value}
             </p>
-            <p className="text-[11px] text-[hsl(var(--muted-foreground))] uppercase tracking-wider">
+            <p className="text-[11px] text-slate-500 uppercase tracking-wider">
               {card.label}
             </p>
           </div>
@@ -166,22 +166,22 @@ export function StatsCards({ data, metadata }: StatsCardsProps) {
       </div>
 
       {/* Extraction stats strip */}
-      <div className="bg-white rounded-xl p-3 border border-[hsl(var(--border))]">
-        <p className="text-[10px] uppercase tracking-widest text-[hsl(var(--muted-foreground))] mb-3 px-1">
+      <div className="bg-white rounded-xl p-3 border border-slate-200 shadow-sm">
+        <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-3 px-1">
           PDF Extraction Summary
         </p>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-2">
           {extractionCards.map((card) => (
             <div
               key={card.label}
-              className="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-[hsl(var(--background))]"
+              className="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-slate-50 hover:bg-emerald-50 transition-all duration-200"
             >
               <card.icon className={`w-4 h-4 shrink-0 ${card.iconColor}`} />
               <div>
-                <p className="text-sm font-semibold text-[hsl(var(--foreground))]">
+                <p className="text-sm font-semibold text-slate-900">
                   {card.value}
                 </p>
-                <p className="text-[10px] text-[hsl(var(--muted-foreground))]">
+                <p className="text-[10px] text-slate-500">
                   {card.label}
                 </p>
               </div>

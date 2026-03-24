@@ -44,7 +44,7 @@ export function SplitDashboard({
     <div className="flex-1 flex flex-col overflow-hidden min-h-0">
       {/* Tab Navigation */}
       <div className="px-5 pt-4 pb-0 shrink-0">
-        <div className="flex items-center gap-1 p-1 rounded-xl bg-[hsl(var(--secondary))] border border-[hsl(var(--border))] w-fit">
+        <div className="flex items-center gap-1 p-1 rounded-xl bg-slate-100 border border-slate-200 w-fit">
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -53,8 +53,8 @@ export function SplitDashboard({
                 flex items-center gap-2 px-4 py-2 text-xs font-medium rounded-lg transition-all duration-200
                 ${
                   activeTab === tab.id
-                    ? "bg-white text-[hsl(var(--foreground))] shadow-sm border border-[hsl(var(--border)/0.5)]"
-                    : "text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--foreground))]"
+                    ? "bg-white text-slate-900 shadow-sm border border-slate-200"
+                    : "text-slate-500 hover:text-slate-700"
                 }
               `}
             >
@@ -80,10 +80,10 @@ export function SplitDashboard({
           <>
             <div className="flex items-center justify-between">
               <div>
-                <h2 className="text-base font-semibold font-heading text-[hsl(var(--foreground))]">
+                <h2 className="text-base font-semibold font-heading text-slate-900">
                   Extracted Report Data
                 </h2>
-                <p className="text-xs text-[hsl(var(--muted-foreground))] mt-0.5">
+                <p className="text-xs text-slate-500 mt-0.5">
                   {metadata.row_count} rows × {metadata.column_count} columns extracted from {metadata.page_count} page{metadata.page_count > 1 ? "s" : ""}
                 </p>
               </div>
@@ -95,19 +95,19 @@ export function SplitDashboard({
 
         {/* ── Document Tab ─────────────────────────────────────── */}
         {activeTab === "document" && (
-          <div className="bg-white rounded-xl overflow-hidden border border-[hsl(var(--border))] shadow-sm flex flex-col" style={{ height: "calc(100vh - 280px)" }}>
-            <div className="px-4 py-3 border-b border-[hsl(var(--border))] flex items-center justify-between shrink-0">
+          <div className="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm flex flex-col" style={{ height: "calc(100vh - 280px)" }}>
+            <div className="px-4 py-3 border-b border-slate-200 flex items-center justify-between shrink-0">
               <div className="flex items-center gap-2">
-                <FileText className="w-4 h-4 text-[hsl(var(--primary))]" />
-                <span className="text-xs font-medium text-[hsl(var(--muted-foreground))] uppercase tracking-wider">
+                <FileText className="w-4 h-4 text-emerald-600" />
+                <span className="text-xs font-medium text-slate-500 uppercase tracking-wider">
                   Document Preview
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-xs text-[hsl(var(--muted-foreground))]">
+                <span className="text-xs text-slate-500">
                   {metadata.filename}
                 </span>
-                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
               </div>
             </div>
             <div className="flex-1 min-h-0">

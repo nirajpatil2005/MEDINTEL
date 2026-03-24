@@ -2,33 +2,47 @@
 
 @layer base {
   :root {
-    /* ─── Light Clinical Theme ─── */
-    --background: 210 20% 97%;
-    --foreground: 220 14% 16%;
+    /* ─── Medical Light Theme with Emerald Accents ─── */
+    /* Crisp, sterile whites for maximum readability */
+    --background: 0 0% 98.8%;
+    --foreground: 215 11% 14%;
     --card: 0 0% 100%;
-    --card-foreground: 220 14% 16%;
+    --card-foreground: 215 11% 14%;
     --popover: 0 0% 100%;
-    --popover-foreground: 220 14% 16%;
-    --primary: 168 80% 32%;
+    --popover-foreground: 215 11% 14%;
+
+    /* Deep trustworthy emerald-green for primary accents */
+    --primary: 160 74% 36%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 210 18% 93%;
-    --secondary-foreground: 220 14% 16%;
-    --muted: 210 18% 93%;
-    --muted-foreground: 215 14% 46%;
-    --accent: 168 60% 94%;
-    --accent-foreground: 168 80% 25%;
-    --destructive: 0 72% 51%;
+
+    /* Subtle light greys for secondary elements */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 215 11% 14%;
+
+    /* Muted elements with slate grey */
+    --muted: 215 15% 91%;
+    --muted-foreground: 215 10% 44%;
+
+    /* Very light icy green for selected/hover states */
+    --accent: 160 100% 92%;
+    --accent-foreground: 160 74% 36%;
+
+    /* Semantic status colors */
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 214 20% 88%;
-    --input: 214 20% 88%;
-    --ring: 168 80% 32%;
+
+    /* Clean borders */
+    --border: 215 20% 88%;
+    --input: 215 20% 88%;
+    --ring: 160 74% 36%;
     --radius: 0.75rem;
 
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 40%;
-    --chart-3: 30 80% 50%;
-    --chart-4: 270 55% 55%;
-    --chart-5: 340 65% 50%;
+    /* Chart colors */
+    --chart-1: 160 74% 36%;
+    --chart-2: 160 74% 50%;
+    --chart-3: 39 92% 50%;
+    --chart-4: 47 92% 56%;
+    --chart-5: 0 84% 60%;
   }
 }
 
@@ -60,16 +74,16 @@
   background: hsl(var(--muted-foreground) / 0.4);
 }
 
-/* Clean panel utility — replaces glassmorphism */
+/* Clean panel utility */
 .glass-panel {
   background: hsl(var(--card));
   border: 1px solid hsl(var(--border) / 0.6);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
 }
 
-/* Gradient text — teal-based */
+/* Gradient text — medical green */
 .gradient-text {
-  background: linear-gradient(135deg, hsl(168, 80%, 32%), hsl(200, 70%, 40%));
+  background: linear-gradient(135deg, #059669, #0d9488);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

@@ -117,13 +117,13 @@ export default function Home() {
     <main className="min-h-screen flex flex-col">
       {/* ── Upload / Loading / Error states – simple header ── */}
       {state !== "results" && (
-        <header className="glass-panel border-b border-[hsl(var(--border)/0.3)] px-6 py-4 flex items-center gap-3 shrink-0">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[hsl(var(--primary))] to-[hsl(280,80%,65%)] flex items-center justify-center">
+        <header className="bg-white border-b border-slate-200 px-6 py-4 flex items-center gap-3 shrink-0 shadow-sm">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-600 to-teal-600 flex items-center justify-center">
             <Activity className="w-5 h-5 text-white" />
           </div>
           <div>
-            <h1 className="text-lg font-bold gradient-text">MedIntel</h1>
-            <p className="text-xs text-[hsl(var(--muted-foreground))]">
+            <h1 className="text-lg font-bold text-slate-900">MedIntel</h1>
+            <p className="text-xs text-slate-500">
               Intelligent Medical Document Processing
             </p>
           </div>
